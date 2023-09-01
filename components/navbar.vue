@@ -1,8 +1,9 @@
 <template>
-  <div style="display: flex; background-color: rgb(181, 181, 181); height: 128px;">
-    <logo style="height: 100%; margin-right: 30%;">
-    </logo>
-  <v-tabs style="height: 126px;"
+  <div class= "nav" style="display: flex;">
+    <div class="logo-nav">
+      <v-img :src="icons[0]" alt="Excellent logo"></v-img>
+    </div>
+  <v-tabs class="options-nav"
   >
     <v-tab>
       Services
@@ -21,14 +22,31 @@
 </template>
 
 <script>
-import logo from './logo.vue';
-
 
   export default {
-    components: {logo
-  },
     data: () => ({
       tab: null,
+    icons: [
+      require('../assets/icons/logo.svg'),
+    ],
     }),
   }
 </script>
+
+<style>
+.nav{
+  height: 100%;
+}
+.logo-nav{
+  margin-right: 500px;
+  margin-left: 48px;
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+.options-nav{
+  margin-left: 48px;
+  margin-top: 26px;
+  margin-bottom: 18px;
+  color: #ffff;
+}
+</style>
