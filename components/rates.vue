@@ -1,7 +1,7 @@
 
 <template>
   <div class="rates">
-    <v-img :src=images[12] :alt="'img-rates'"/>
+    <v-img class="rates-logo" :src=ratesUrl :alt="'img-rates'"/>
     <div class="rates-container">
       <v-carousel v-model="model">
         <v-carousel-item v-for="(place, i) in places" :key="place" style="width: 100%;">
@@ -55,10 +55,11 @@ export default {
       require('../assets/places/PEARL-RIVER.svg'),
       require('../assets/places/AIRPORTS.svg'),
       require('../assets/places/LONG-DISTANCE.svg'),
-      require('../assets/icons/rates.svg')
+      
 
 
     ],
+  ratesUrl: require('../assets/icons/rates.svg'),
 
   }),
 }
@@ -71,10 +72,21 @@ export default {
   width: 1860px;
   height: 1080px;
 }
+.rates-logo{
+  margin-bottom: 32px;
+}
 
+.card{
+text-align: center;
+height: 100%;
+
+}
 .card p .text-h2 {
   padding-top: 5%;
   color: black;
+}
+.text-h2{
+  margin-top: 12px;
 }
 
 .text {
