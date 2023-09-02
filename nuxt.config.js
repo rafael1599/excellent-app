@@ -58,7 +58,9 @@ export default {
   googleFonts: {
     families: {
       Roboto: true,
-      Judson: [400, 700]
+      Judson: [400, 700],
+      'Nerko One': [400],
+      Inter: [400, 700]
     }
   },
 

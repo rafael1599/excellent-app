@@ -1,14 +1,16 @@
 <template>
     <div class="services">
-        <v-img class="img-services" :src="icons[0]" />
+        <div class="services-title">
+            <span>Services</span>
+        </div>
         <div class="services-content">
-            <div class="serv-izq square-container">
-                <v-img :src="icons[1]" />
+            <div class="card-custom services-content-left">
+                <img :src="taxiCar" />
                 <h2>TAXI SERVICE</h2>
                 <p>Experience Comfort & Convenience with our 4-Passenger Taxis! </p>
             </div>
-            <div class="serv-der square-container">
-                <v-img :src="icons[2]" />
+            <div class="card-custom services-content-right">
+                <img :src="taxiVan" />
                 <h2>MINIVAN</h2>
                 <p>Discover our Spacious Minivans for Seamless Group Outings & Family Trips.</p>
             </div>
@@ -20,49 +22,63 @@ export default {
     name: 'services',
     data: () => ({
         model: 0,
-        icons: [
-            require('../assets/icons/services.svg'),
-            require('../assets/icons/taxi-car.svg'),
-            require('../assets/icons/taxi-van.svg'),
-        ],
-
+        taxiCar: require('../assets/icons/taxi-car.svg'),
+        taxiVan: require('../assets/icons/taxi-van.svg')
     }),
 }
 </script>
-<style>
-.img-services {
-    max-width: 105%;
-    width: 1860px;
-    height: 153px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.services-content {
-    width: 1860px;
+<style lang="scss">
+.services{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.square-container {
-    text-align: center;
-    width: 915px;
-    height: 900px;
-    border-radius: 10px;
-    background-color: #C7C7C7;
-}
-
-.square-container p {
-    margin-left: 94px;
-    margin-right: 94px;
-}
-
-.serv-izq {
-    margin-right: 30px;
-}
-
-.serv-der {
-    background-color: #ffff;
+    flex-direction: column;
+    gap: 30px;
+    &-title{
+        background-color: #ffc738cc;
+        border-radius: 10px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-family: 'Nerko One';
+            font-size: 82px;
+        }
+    }
+    &-content{
+        display: flex;
+        gap: 30px;
+        .card-custom{
+            width: 50%;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 750px;
+            img{
+                max-height: 350px;
+                margin-bottom: 33px;
+            }
+            h2{
+                font-size: 68px;
+                font-family: 'Inter';
+                line-height: normal;
+                margin-bottom: 25px;
+            }
+            p{
+                font-size: 34px;
+                font-family: 'Inter';
+                max-width: 727px;
+                text-align: center;
+                line-height: normal;
+            }
+        }
+        &-left{
+            background-color: #C7C7C7;
+        }
+        &-right{
+            background-color: #FFFFFF;
+        }
+    }
 }
 </style>
