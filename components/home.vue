@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" id="home">
     <div class="card-white">
       <div class="card-white-left">
         <p>Serving Rockland County and surrounding areas</p>

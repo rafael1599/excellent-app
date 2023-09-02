@@ -4,7 +4,7 @@
       height="126"
       color="#EAEAEA">
     <v-app-bar-title>
-      <img :src="logoUrl" alt="">
+      <img :src="logoUrl" href="#home">
     </v-app-bar-title>
     <v-spacer></v-spacer>
     <v-btn 
@@ -12,19 +12,19 @@
       color="transparent"
       height="94"
       elevation="0"
-      to="services">Services</v-btn>
+      href="#services">Services</v-btn>
     <v-btn 
       class="links"
       color="transparent"
       height="94"
       elevation="0"
-      to="rates">Rates</v-btn>
+      href="#rates">Rates</v-btn>
     <v-btn 
       class="links"
       color="transparent"
       height="94"
       elevation="0"
-      to="contact">Contact</v-btn>
+      href="#contact">Contact</v-btn>
     <v-btn 
       class="links"
       color="transparent"

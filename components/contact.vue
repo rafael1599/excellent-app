@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="contact" id="contact">
     <v-img class="contact-logo" :src=contactUrl :alt="'img-contact'"/>
       <div class="contact-content">
         <div class="contact-izq square-container">

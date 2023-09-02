@@ -1,6 +1,6 @@
 
 <template>
-  <div class="rates">
+  <div class="rates" id="rates">
     <div class="rates-title">
       <span>Rates</span>
     </div>
