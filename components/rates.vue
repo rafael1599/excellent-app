@@ -1,23 +1,15 @@
 
 <template>
   <div class="rates">
-    <v-img class="rates-logo" :src=ratesUrl :alt="'img-rates'"/>
-    <div class="rates-container">
-      <v-carousel v-model="model">
-        <v-carousel-item v-for="(place, i) in places" :key="place" style="width: 100%;">
-          <v-sheet :place="place" tile style=" background-color: #ffff; height: 100%;">
-            <v-row class="align-content-center" align="center" justify="center">
-              <div class="card">
-                <p class="text-h2">
-                  {{ places[i] }}
-                </p>
-                <v-img class="img-places" :src=images[i] :alt="'image ' + images[i]"></v-img>
-                <p><a class="text">(Click here to view rates for this area)</a></p>
-              </div>
-            </v-row>
-          </v-sheet>
-        </v-carousel-item>
-      </v-carousel>
+    <div class="rates-title">
+      <span>Rates</span>
+    </div>
+    <div class="rates-content">
+      <div class="card-custom rates-content-left" v-for="p in places" :key="p">
+          <img :src="p.img"/>
+          <h2>{{p.title}}</h2>
+          <p>{{p.text}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -28,45 +20,86 @@ export default {
   data: () => ({
     model: 0,
     places: [
-      'TO MONSEY',
-      'TO NEW CITY',
-      'TO NANUET & BARDONIA',
-      'WEST NYACK & NYACK',
-      'NEW SQUARE',
-      'POMONA',
-      'AIRMONT',
-      'SUFFERN',
-      'CHESTNUT RIDGE',
-      'PEARL RIVER',
-      'AIRPORTS',
-      'LONG DISTANCE',
+      {
+        title: 'TO MONSEY',
+        img: require('../assets/places/to-monsey.svg'),
+        text: '(click here to view rates to Monsey)'
+      },
+      {
+        title: 'TO NEW CITY',
+        img: require('../assets/places/to-new-city.svg'),
+        text: '(click here to view rates to New City)'
+      },
+      {
+        title: 'TO NANUET & BARDONIA',
+        img: require('../assets/places/to-nanuet-and-bardonia.svg'),
+        text: '(click here to view rates to Nanuet & Bardonia)'
+      }
     ],
-    images: [
-
-      require('../assets/places/to-monsey.svg'),
-      require('../assets/places/to-new-city.svg'),
-      require('../assets/places/to-nanuet-and-bardonia.svg'),
-      require('../assets/places/WEST-NYACK-&-NYACK.svg'),
-      require('../assets/places/NEW-SQUARE.svg'),
-      require('../assets/places/POMONA.svg'),
-      require('../assets/places/AIRMONT.svg'),
-      require('../assets/places/SUFFERN.svg'),
-      require('../assets/places/CHESTNUT RIDGE.svg'),
-      require('../assets/places/PEARL-RIVER.svg'),
-      require('../assets/places/AIRPORTS.svg'),
-      require('../assets/places/LONG-DISTANCE.svg'),
-      
-
-
-    ],
-  ratesUrl: require('../assets/icons/rates.svg'),
+    ratesUrl: require('../assets/icons/rates.svg'),
 
   }),
 }
 </script>
 
-
-<style>
+<style lang="scss">
+.rates{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &-title{
+        background-color: #ffc738cc;
+        border-radius: 10px;
+        height: 130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            font-family: 'Nerko One';
+            font-size: 82px;
+        }
+    }
+    &-content{
+      display: flex;
+      gap: 30px;
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      &::-webkit-scrollbar{
+        display: none;
+      };
+      .card-custom{
+        min-width: 906px;
+        max-width: 906px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        white-space: normal;
+        overflow: hidden;
+        background-color: #FFFFFF;
+        height: 750px;
+        img{
+          margin-bottom: 16px;
+        }
+        h2{
+          font-size: 48px;
+          font-family: 'Inter';
+          line-height: normal;
+          margin-bottom: 8px;
+        }
+        p{
+          font-size: 20px;
+          font-family: 'Inter';
+          max-width: 727px;
+          text-align: center;
+          line-height: normal;
+        }
+      }
+    }
+}
+</style>
 .rates {
   margin-top: 32px;
   width: 1860px;
