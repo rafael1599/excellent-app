@@ -48,9 +48,12 @@
 </script>
 
 <style lang="scss">
+.v-app-bar{
+  margin-top: 30px !important;
+}
 .v-toolbar__content{
   background-color: #ffffff;
-  margin: 30px 30px 0px 30px;
+  margin: 0px 30px 0px 30px;
   border-radius: 10px 10px 0px 0px;
   padding: 0px 48px;
   gap: 8px;

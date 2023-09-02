@@ -1,19 +1,25 @@
 <template>
   <div class="home">
     <div class="card-white">
-      <div class="card-white-izq">
-        <div class="container">
-          <p style="font-size: 63px;">Serving Rockland County and surrounding areas</p>
-          <p style="margin-top: 30px; font-size: 43px;">Your Safe Ride, Pirate-Free</p>
-          <a href="tel:8454417777"><v-img class="home-number" :src="icons[0]"></v-img></a>
-        </div>
+      <div class="card-white-left">
+        <p>Serving Rockland County and surrounding areas</p>
+        <p>Your Safe Ride, Pirate-Free</p>
+        <v-btn
+          color="#FFC736"
+          width="344"
+          height="72"
+          rounded
+          href="tel:8454417777"
+          style="padding: 0 61px; margin-top: 10px;">
+            <img :src="number">
+        </v-btn>
       </div>
-      <div class="card-withe-der">
-        <v-img :src="icons[1]">
+      <div class="card-withe-right">
+        <v-img :src="taxiCar">
         </v-img>
       </div>
     </div>
-    <div class="card-gray">
+    <!-- <div class="card-gray">
       <div class="container">
         <h2>Welcome to Excellent Taxi</h2>
         <p>Your Premier Transportation Partner! We provide top-notch taxi home with modern vehicles and skilled drivers,
@@ -22,7 +28,7 @@
           and exceptional service.</p>
         <p>Book with us today!</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -31,59 +37,37 @@ export default {
   name: 'home',
   data: () => ({
     model: 0,
-    icons: [
-
-      require('../assets/icons/number.svg'),
-      require('../assets/icons/taxi-car.svg'),
-
-
-
-    ],
-
+    number: require('../assets/icons/number.svg'),
+    taxiCar: require('../assets/icons/taxi-car.svg')
   }),
 }
 </script>
-<style>
+<style lang="scss">
 .home {
-  margin-top: 80px;
-  width: 1920px;
-  height: 1080px;
-}
-
-.container {
-  margin-top: 00px;
-  margin-left: 48px;
-  margin-right: 1081px;
-  padding-left: 0px;
-  font-size: 43px;
-}
-
-.home-number {
-  height: 72px;
-  width: 344px;
-
-  margin-top: 30px;
-}
-
-.card-white {
-  width: 1860px;
-  height: 548px;
-  display: flex;
+  width: 100%;
   background-color: #ffff;
-  border-radius: 10px;
-
+  padding: 32px 48px;
+  border-radius: 0 0 10px 10px;
+  .card-white {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-left {
+      max-width: 550px;
+      p{
+        font-size: 43px;
+        font-family: 'Judson';
+        letter-spacing: normal;
+        line-height: normal;
+        margin-bottom: 27px;
+      }
+    }
+    &-right{
+      max-width: 550px;
+    }
+  }
 }
 
-.card-gray {
-  border-radius: 10px;
-  background-color: #D9D9D9;
-  font-size: 50PX;
-  margin-top: 30px;
-  text-align: center;
-  width: 1860px;
-  height: 511px;
-}
 
-.card-white-izq {
-  width: 50%;
-}</style>
+
+</style>

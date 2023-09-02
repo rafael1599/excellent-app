@@ -31,6 +31,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-fonts'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -51,6 +52,13 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
+    }
+  },
+
+  googleFonts: {
+    families: {
+      Roboto: true,
+      Judson: [400, 700]
     }
   },
 
