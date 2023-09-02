@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="container-index">
     <home />
+    <welcome/>
     <services/>
     <rates />
     <contact />
@@ -12,11 +13,20 @@ import home from '~/components/home.vue';
 import services from '~/components/services.vue';
 import rates from '~/components/rates.vue';
 import contact from '~/components/contact.vue';
+import welcome from '~/components/welcome.vue';
 
 export default {
   name: 'IndexPage',
   components: {
-   home, services, rates, contact
+   home, services, rates, contact, welcome
   }
 }
 </script>
+
+<style lang="scss">
+.container-index{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+</style>

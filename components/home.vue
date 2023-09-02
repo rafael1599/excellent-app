@@ -19,16 +19,6 @@
         </v-img>
       </div>
     </div>
-    <!-- <div class="card-gray">
-      <div class="container">
-        <h2>Welcome to Excellent Taxi</h2>
-        <p>Your Premier Transportation Partner! We provide top-notch taxi home with modern vehicles and skilled drivers,
-          ensuring a seamless journey. Whether you need a quick ride or airport transfers, trust us for punctuality,
-          safety,
-          and exceptional service.</p>
-        <p>Book with us today!</p>
-      </div>
-    </div> -->
   </div>
 </template>
 
