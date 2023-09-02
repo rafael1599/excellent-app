@@ -1,24 +1,37 @@
 <template>
-  <div class= "nav" style="display: flex;">
-    <div class="logo-nav">
-      <v-img :src="icons[0]" alt="Excellent logo"></v-img>
-    </div>
-  <v-tabs class="options-nav"
-  >
-    <v-tab>
-      Services
-    </v-tab>
-    <v-tab>
-      Rates
-    </v-tab>
-    <v-tab>
-      Contact
-    </v-tab>
-    <v-tab>
-      Testimonials
-    </v-tab>
-  </v-tabs>
-</div>
+  <v-app-bar
+      elevation="0"
+      height="126"
+      color="#EAEAEA">
+    <v-app-bar-title>
+      <img :src="logoUrl" alt="">
+    </v-app-bar-title>
+    <v-spacer></v-spacer>
+    <v-btn 
+      class="links"
+      color="transparent"
+      height="94"
+      elevation="0"
+      to="services">Services</v-btn>
+    <v-btn 
+      class="links"
+      color="transparent"
+      height="94"
+      elevation="0"
+      to="rates">Rates</v-btn>
+    <v-btn 
+      class="links"
+      color="transparent"
+      height="94"
+      elevation="0"
+      to="contact">Contact</v-btn>
+    <v-btn 
+      class="links"
+      color="transparent"
+      height="94"
+      elevation="0"
+      to="testimonials">Testimonials</v-btn>
+  </v-app-bar>
 </template>
 
 <script>
@@ -26,27 +39,29 @@
   export default {
     data: () => ({
       tab: null,
-    icons: [
-      require('../assets/icons/logo.svg'),
-    ],
+      items: [
+          'web', 'shopping', 'videos', 'images', 'news',
+      ],
+      logoUrl: require('../assets/icons/logo.svg'),
     }),
   }
 </script>
 
-<style>
-.nav{
-  height: 100%;
-}
-.logo-nav{
-  margin-right: 500px;
-  margin-left: 48px;
-  margin-top: 24px;
-  margin-bottom: 18px;
-}
-.options-nav{
-  margin-left: 48px;
-  margin-top: 26px;
-  margin-bottom: 18px;
-  color: #ffff;
+<style lang="scss">
+.v-toolbar__content{
+  background-color: #ffffff;
+  margin: 30px 30px 0px 30px;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0px 48px;
+  gap: 8px;
+  .links{
+    color: #000000;
+    text-transform: capitalize;
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: normal;
+    max-width: 219px;
+    width: 100%;
+  }
 }
 </style>

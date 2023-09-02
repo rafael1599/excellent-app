@@ -1,9 +1,6 @@
 <template>
   <v-app style="background-color:#EAEAEA">
-
-    <v-app-bar :clipped-left="clipped" fixed style="height: 110px; background-color:#ffff; align-items: center;">
-      <navbar />
-    </v-app-bar>
+    <navbar />
     <v-main>
       <v-container>
         <Nuxt />
