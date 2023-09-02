@@ -5,11 +5,17 @@
       <span>Rates</span>
     </div>
     <div class="rates-content">
+      <v-btn class="arrow-slider arrow-slider-left" icon>
+        <v-icon color="white">mdi-arrow-left-drop-circle</v-icon>
+      </v-btn>
       <div class="card-custom rates-content-left" v-for="p in places" :key="p">
           <img :src="p.img"/>
           <h2>{{p.title}}</h2>
           <p>{{p.text}}</p>
       </div>
+      <v-btn class="arrow-slider arrow-slider-right" icon>
+        <v-icon color="white">mdi-arrow-right-drop-circle</v-icon>
+      </v-btn>
     </div>
   </div>
 </template>
@@ -47,6 +53,7 @@ export default {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    position: relative;
     &-title{
         background-color: #ffc738cc;
         border-radius: 10px;
@@ -96,6 +103,21 @@ export default {
           text-align: center;
           line-height: normal;
         }
+      }
+    }
+    .arrow-slider{
+      position: absolute;
+      top: 50%;
+      width: 60px;
+      height: 60px;
+      i{
+        font-size: 60px !important;
+      }
+      &-left{
+        left: 24px;
+      }
+      &-right{
+        right: 24px;
       }
     }
 }
