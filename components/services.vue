@@ -1,72 +1,68 @@
 <template>
-  <div class="services" >
-    <div class="card-white" style="display: flex; background-color: #ffff; border-radius: 10px;">
-      <div class="card-white-izq">
-        <div class="container">
-          <p style="font-size: 63px;">Serving Rockland County and surrounding areas</p>
-          <p style="margin-top: 30px; font-size: 43px;">Your Safe Ride, Pirate-Free</p>
-          <a href="tel:8454417777"><v-img class="services-number" :src="icons[0]"></v-img></a>
+    <div class="services">
+        <v-img class="img-services" :src="icons[0]" />
+        <div class="services-content">
+            <div class="serv-izq square-container">
+                <v-img :src="icons[1]" />
+                <h2>TAXI SERVICE</h2>
+                <p>Experience Comfort & Convenience with our 4-Passenger Taxis! </p>
+            </div>
+            <div class="serv-der square-container">
+                <v-img :src="icons[2]" />
+                <h2>MINIVAN</h2>
+                <p>Discover our Spacious Minivans for Seamless Group Outings & Family Trips.</p>
+            </div>
         </div>
-      </div>
-      <div class="card-withe-der">
-        <v-img :src="icons[1]">
-        </v-img>
-      </div>
     </div>
-    <div class="card-gray" style="width: 1920px; border-radius: 10px; background-color: #D9D9D9; font-size: 50PX; margin-top: 30px;">
-      <div class="container">
-        <h2>Welcome to Excellent Taxi</h2>
-        <p>Your Premier Transportation Partner! We provide top-notch taxi services with modern vehicles and skilled drivers,
-          ensuring a seamless journey. Whether you need a quick ride or airport transfers, trust us for punctuality, safety,
-          and exceptional service.</p>
-        <p>Book with us today!</p>
-      </div>
-    </div>
-  </div>
 </template>
-
 <script>
 export default {
-  name: 'services',
-  data: () => ({
-    model: 0,
-    icons: [
+    name: 'services',
+    data: () => ({
+        model: 0,
+        icons: [
+            require('../assets/icons/services.svg'),
+            require('../assets/icons/taxi-car.svg'),
+            require('../assets/icons/taxi-van.svg'),
+        ],
 
-      require('../assets/icons/number.svg'),
-      require('../assets/icons/taxi-car.svg'),
-
-
-
-    ],
-
-  }),
+    }),
 }
 </script>
 <style>
-.services{
-  margin-top: 80px;
-  width:1920px; 
-  height:1080px;
-}
-.container{
-  margin-top: 00px;
-  margin-left: 48px;
-  margin-right: 1081px;
-  padding-left: 0px;
-  font-size: 43px;
-}
-.services-number{
-  height: 72px;
-  width: 344px;
-
-  margin-top: 30px;
+.img-services {
+    max-width: 105%;
+    width: 1860px;
+    height: 153px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.card-gray{
-  text-align: center;
+.services-content {
+    width: 1860px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.card-white-izq{
-  width: 50%;
+.square-container {
+    text-align: center;
+    width: 915px;
+    height: 900px;
+    border-radius: 10px;
+    background-color: #C7C7C7;
+}
+
+.square-container p {
+    margin-left: 94px;
+    margin-right: 94px;
+}
+
+.serv-izq {
+    margin-right: 30px;
+}
+
+.serv-der {
+    background-color: #ffff;
 }
 </style>

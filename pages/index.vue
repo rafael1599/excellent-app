@@ -1,13 +1,14 @@
 <template>
   <div>
-    <services />
+    <home />
+    <services/>
     <rates />
     <contact />
   </div>
 </template>
 
 <script>
-import navbar from '~/components/navbar.vue';
+import home from '~/components/home.vue';
 import services from '~/components/services.vue';
 import rates from '~/components/rates.vue';
 import contact from '~/components/contact.vue';
@@ -15,7 +16,7 @@ import contact from '~/components/contact.vue';
 export default {
   name: 'IndexPage',
   components: {
-   services, rates, contact
+   home, services, rates, contact
   }
 }
 </script>
