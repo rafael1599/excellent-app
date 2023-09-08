@@ -5,40 +5,70 @@
     </div>
     <div class="contact-content">
       <div class="card-custom contact-content-left">
+        <h2>Send us a message</h2>
         <v-form v-model="validForm">
-          <v-text-field
-            v-model="formContact.firstName"
-            :rules="rules.firstName"
-            label="First Name"
-          ></v-text-field>
-          <v-text-field
-            v-model="formContact.lastName"
-            :rules="rules.lastName"
-            label="Last Name"
-          ></v-text-field>
-          <v-text-field
-            v-model="formContact.email"
-            :rules="rules.email"
-            label="E-mail"
-          ></v-text-field>
-          <v-text-field
-            v-model="formContact.phone"
-            :rules="rules.phone"
-            label="Phone number"
-          ></v-text-field>
-          <v-textarea
-            v-model="formContact.message"
-            :rules="rules.message"
-            label="Message"
-          ></v-textarea>
-          <v-btn
-            class="mr-4"
-            @click="submit">
-            Submit
-          </v-btn>
-          <v-btn @click="clear">
-            clear
-          </v-btn>
+          <div class="row m-0">
+            <div class="col-6 py-0">
+              <v-text-field
+                v-model="formContact.firstName"
+                :rules="rules.firstName"
+                label="First Name"
+                height="55"
+                rounded
+                solo
+              ></v-text-field>
+            </div>
+            <div class="col-6 py-0">
+              <v-text-field
+                v-model="formContact.lastName"
+                :rules="rules.lastName"
+                label="Last Name"
+                height="55"
+                rounded
+                solo
+              ></v-text-field>
+            </div>
+            <div class="col-6 py-0">
+              <v-text-field
+                v-model="formContact.email"
+                :rules="rules.email"
+                label="E-mail"
+                height="55"
+                rounded
+                solo
+              ></v-text-field>
+            </div>
+            <div class="col-6 py-0">
+              <v-text-field
+                v-model="formContact.phone"
+                :rules="rules.phone"
+                label="Phone number"
+                height="55"
+                rounded
+                solo
+              ></v-text-field>
+            </div>
+            <div class="col-12 pt-0">
+              <v-textarea
+                v-model="formContact.message"
+                :rules="rules.message"
+                label="Message"
+                rounded
+                solo
+              ></v-textarea>
+            </div>
+          </div>
+          <div class="d-flex justify-end">
+            <v-btn
+              color="#FFC736"
+              @click="sendMessage()"
+              width="150"
+              height="60"
+              rounded
+              :disabled="!validForm">
+              Send
+            </v-btn>            
+          </div>
         </v-form>
       </div>
       <div class="card-custom contact-content-right">
@@ -118,6 +148,11 @@ export default {
       ]
     }
   }),
+  methods: {
+    sendMessage(){
+      console.log("this.formContact", this.formContact)
+    }
+  }
 };
 </script>
 
@@ -169,6 +204,16 @@ export default {
     }
     &-left {
       background-color: #c7c7c7;
+      padding: 0px 70px;
+      justify-content: center !important;
+      h2{
+        margin-bottom: 48px !important;
+        text-align: center;
+      }
+      .v-btn{
+        text-transform: capitalize;
+        font-size: 18px;
+      }
     }
     &-right {
       background-color: #ffffff;
