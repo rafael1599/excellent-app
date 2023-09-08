@@ -40,7 +40,43 @@ export default {
         title: 'TO NANUET & BARDONIA',
         img: require('../assets/places/to-nanuet-and-bardonia.svg'),
         text: '(click here to view rates to Nanuet & Bardonia)'
-      }
+      },{
+        title: 'WEST NYACK & NYACK',
+        img: require('../assets/places/WEST-NYACK-&-NYACK.svg'),
+        text: '(click here to view rates to WEST NYACK & NYACK)'
+      },{
+        title: 'NEW SQUARE',
+        img: require('../assets/places/NEW-SQUARE.svg'),
+        text: '(click here to view rates to NEW SQUARE)'
+      },{
+        title: 'POMONA',
+        img: require('../assets/places/POMONA.svg'),
+        text: '(click here to view rates in POMONA)'
+      },{
+        title: 'AIRMONT',
+        img: require('../assets/places/AIRMONT.svg'),
+        text: '(click here to view rates to AIRMONT)'
+      },{
+        title: 'SUFFERN',
+        img: require('../assets/places/SUFFERN.svg'),
+        text: '(click here to view rates to SUFFERN)'
+      },{
+        title: 'CHESTNUT RIDGE',
+        img: require('../assets/places/CHESTNUT-RIDGE.svg'),
+        text: '(click here to view rates to CHESTNUT RIDGE)'
+      },{
+        title: 'PEARL RIVER',
+        img: require('../assets/places/PEARL-RIVER.svg'),
+        text: '(click here to view rates to PEARL RIVER)'
+      },{
+        title: 'AIRPORTS',
+        img: require('../assets/places/AIRPORTS.svg'),
+        text: '(click here to view rates to AIRPORTS)'
+      },{
+        title: 'LONG DISTANCE',
+        img: require('../assets/places/LONG-DISTANCE.svg'),
+        text: '(click here to view rates to LONG DISTANCE)'
+      },
     ],
     ratesUrl: require('../assets/icons/rates.svg'),
 
