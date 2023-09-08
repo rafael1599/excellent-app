@@ -41,6 +41,9 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    ['nuxt-gmaps', {
+      key: 'AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0',
+    }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -61,7 +64,7 @@ export default {
       Roboto: true,
       Judson: [400, 700],
       'Nerko One': [400],
-      Inter: [400, 700]
+      Inter: [400, 500, 700]
     }
   },
 
