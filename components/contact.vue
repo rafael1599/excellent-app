@@ -105,7 +105,6 @@
 </template>
 
 <script>
-
 export default {
   name: "contact",
   data: () => ({
@@ -152,6 +151,9 @@ export default {
     sendMessage(){
       console.log("this.formContact", this.formContact)
     }
+  },
+  async mounted(){
+    axios.get("https://sheets.googleapis.com/v4/spreadsheets/1o7GdrkD50Wk_WB2Gm1t94vW7RSA3ROh_GH0z8yUc9Uc")
   }
 };
 </script>
