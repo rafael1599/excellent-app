@@ -5,7 +5,41 @@
     </div>
     <div class="contact-content">
       <div class="card-custom contact-content-left">
-        <h2>Send us a message</h2>
+        <v-form v-model="validForm">
+          <v-text-field
+            v-model="formContact.firstName"
+            :rules="rules.firstName"
+            label="First Name"
+          ></v-text-field>
+          <v-text-field
+            v-model="formContact.lastName"
+            :rules="rules.lastName"
+            label="Last Name"
+          ></v-text-field>
+          <v-text-field
+            v-model="formContact.email"
+            :rules="rules.email"
+            label="E-mail"
+          ></v-text-field>
+          <v-text-field
+            v-model="formContact.phone"
+            :rules="rules.phone"
+            label="Phone number"
+          ></v-text-field>
+          <v-textarea
+            v-model="formContact.message"
+            :rules="rules.message"
+            label="Message"
+          ></v-textarea>
+          <v-btn
+            class="mr-4"
+            @click="submit">
+            Submit
+          </v-btn>
+          <v-btn @click="clear">
+            clear
+          </v-btn>
+        </v-form>
       </div>
       <div class="card-custom contact-content-right">
         <GMap
@@ -55,6 +89,33 @@ export default {
     pins: {
       selected: '',
       notSelected: ''
+    },
+    validForm: false,
+    formContact: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      message: ''
+    },
+    rules: {
+      firstName: [
+        v => !!v || 'First Name is required',
+      ],
+      lastName: [
+        v => !!v || 'Last Name is required',
+      ],
+      email: [
+        v => !!v || 'Email is required',
+        v => /.+@.+\..+/.test(v) || 'Email must be valid',
+      ],
+      phone: [
+        v => !!v || 'Phone is required',
+        v => v.length == 10 || 'Phone must be valid',
+      ],
+      message: [
+        v => !!v || 'Message is required', 
+      ]
     }
   }),
 };
