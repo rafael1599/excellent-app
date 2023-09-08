@@ -4,16 +4,16 @@
     <div class="rates-title">
       <span>Rates</span>
     </div>
-    <div class="rates-content">
-      <v-btn class="arrow-slider arrow-slider-left" icon>
+    <div class="rates-content" id="rates-content">
+      <v-btn class="arrow-slider arrow-slider-left" icon @click="navigateCards('prev')">
         <v-icon color="white">mdi-arrow-left-drop-circle</v-icon>
       </v-btn>
-      <div class="card-custom rates-content-left" v-for="p in places" :key="p">
+      <div class="card-custom rates-content-cards" v-for="p in places" :key="p.title">
           <img :src="p.img"/>
           <h2>{{p.title}}</h2>
           <p>{{p.text}}</p>
       </div>
-      <v-btn class="arrow-slider arrow-slider-right" icon>
+      <v-btn class="arrow-slider arrow-slider-right" icon @click="navigateCards('next')">
         <v-icon color="white">mdi-arrow-right-drop-circle</v-icon>
       </v-btn>
     </div>
@@ -78,9 +78,22 @@ export default {
         text: '(click here to view rates to LONG DISTANCE)'
       },
     ],
-    ratesUrl: require('../assets/icons/rates.svg'),
-
+    ratesUrl: require('../assets/icons/rates.svg')
   }),
+  methods: {
+    navigateCards(direction) {
+      let d = document.getElementById("rates-content")
+      let scroll = {
+        behavior: "smooth"
+      }
+      if(direction == 'prev'){
+        scroll.left = d.scrollLeft - 910
+      }else{
+        scroll.left = d.scrollLeft + 910
+      }
+      d.scrollTo(scroll)
+    }
+  }
 }
 </script>
 
