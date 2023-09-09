@@ -106,7 +106,7 @@
 </template>
 
 <script>
-const URLSHEETSGOOGLEAPI = 'https://sheets.googleapis.com/v4/spreadsheets/1o7GdrkD50Wk_WB2Gm1t94vW7RSA3ROh_GH0z8yUc9Uc'
+var querystring = require('querystring')
 export default {
   name: "contact",
   data: () => ({
@@ -154,10 +154,11 @@ export default {
     async sendMessage(){
       this.loading = true
       try {
-        let res = await this.$axios.post(`/api/excellent-api/sendEmail`, this.formContact)
+        let res = await this.$axios.post(`/api/excellent-api/sendEmail`, querystring.stringify(this.formContact),
+          {headers: {'content-type': 'application/x-www-form-urlencoded'}})
         if(res.data.success){
           //ADD ALERT
-          this.$refs.form.reset()
+          // this.$refs.form.reset()
         }
       } catch (error) {
         console.log("error", error)
