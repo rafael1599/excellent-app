@@ -1,5 +1,6 @@
 <template>
     <v-app-bar
+    min-width="300px"
     class="d-none d-sm-block" cols="12" sm="6"
     elevation="0"
     height="126"
@@ -28,12 +29,6 @@
         height="94"
         elevation="0"
         href="#contact">Contact</v-btn>
-        <v-btn 
-        class="links"
-        color="transparent"
-        height="94"
-        elevation="0"
-        to="testimonials">Testimonials</v-btn>
     </v-col>
       </v-app-bar>
 </template>
