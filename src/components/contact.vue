@@ -6,7 +6,7 @@
     <div class="contact-content">
       <div class="card-custom contact-content-left">
         <h2>Send us a message</h2>
-        <v-form v-model="validForm">
+        <v-form v-model="validForm" ref="form">
           <div class="row m-0">
             <div class="col-6 py-0">
               <v-text-field
@@ -65,7 +65,8 @@
               width="150"
               height="60"
               rounded
-              :disabled="!validForm">
+              :loading="loading"
+              :disabled="!validForm || loading">
               Send
             </v-btn>            
           </div>
@@ -141,35 +142,26 @@ export default {
       ],
       phone: [
         v => !!v || 'Phone is required',
-        v => v.length == 10 || 'Phone must be valid',
+        v => (!!v && v.length == 10) || 'Phone must be valid',
       ],
       message: [
         v => !!v || 'Message is required', 
       ]
-    }
+    },
+    loading: false
   }),
   methods: {
     async sendMessage(){
       this.loading = true
       try {
         let res = await this.$axios.post(`/api/excellent-api/sendEmail`, this.formContact)
-        if(res.success){
-          console.log("res.data", res.data)
-          // this.resetForm()
+        if(res.data.success){
+          this.$refs.form.reset()
         }
       } catch (error) {
         console.log("error", error)
       } finally {
         this.loading = false
-      }
-    },
-    async resetForm(){
-      this.formContact = {
-        firstName: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
       }
     }
   },
