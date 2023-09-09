@@ -158,7 +158,7 @@ export default {
           {headers: {'content-type': 'application/x-www-form-urlencoded'}})
         if(res.data.success){
           //ADD ALERT
-          // this.$refs.form.reset()
+          this.$refs.form.reset()
         }
       } catch (error) {
         console.log("error", error)
