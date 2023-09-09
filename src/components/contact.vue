@@ -157,7 +157,7 @@ export default {
         let res = await this.$axios.post(`/api/excellent-api/sendEmail`, querystring.stringify(this.formContact),
           {headers: {'content-type': 'application/x-www-form-urlencoded'}})
         if(res.data.success){
-          //ADD ALERT
+          alert("We've got your message, well be contacting you soon!")
           this.$refs.form.reset()
         }
       } catch (error) {
