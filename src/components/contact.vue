@@ -7,8 +7,11 @@
       <div class="card-custom contact-content-left">
         <h2>Send us a message</h2>
         <v-form v-model="validForm" ref="form">
-          <div class="row m-0">
-            <div class="col-6 py-0">
+          <v-row class="m-0">
+            <v-col
+              class="py-0"
+              cols="12"
+              md="6">
               <v-text-field
                 v-model="formContact.firstName"
                 :rules="rules.firstName"
@@ -17,8 +20,11 @@
                 rounded
                 solo
               ></v-text-field>
-            </div>
-            <div class="col-6 py-0">
+            </v-col>
+            <v-col
+              class="py-0"
+              cols="12"
+              md="6">
               <v-text-field
                 v-model="formContact.lastName"
                 :rules="rules.lastName"
@@ -27,8 +33,11 @@
                 rounded
                 solo
               ></v-text-field>
-            </div>
-            <div class="col-6 py-0">
+            </v-col>
+            <v-col
+              class="py-0"
+              cols="12"
+              md="6">
               <v-text-field
                 v-model="formContact.email"
                 :rules="rules.email"
@@ -37,8 +46,11 @@
                 rounded
                 solo
               ></v-text-field>
-            </div>
-            <div class="col-6 py-0">
+            </v-col>
+            <v-col
+              class="py-0"
+              cols="12"
+              md="6">
               <v-text-field
                 v-model="formContact.phone"
                 :rules="rules.phone"
@@ -47,8 +59,10 @@
                 rounded
                 solo
               ></v-text-field>
-            </div>
-            <div class="col-12 pt-0">
+            </v-col>
+            <v-col
+              class="pt-0"
+              cols="12">
               <v-textarea
                 v-model="formContact.message"
                 :rules="rules.message"
@@ -56,8 +70,8 @@
                 rounded
                 solo
               ></v-textarea>
-            </div>
-          </div>
+            </v-col>
+          </v-row>
           <div class="d-flex justify-end">
             <v-btn
               color="#FFC736"
