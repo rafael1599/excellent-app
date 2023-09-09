@@ -166,19 +166,6 @@ export default {
         this.loading = false
       }
     }
-  },
-  async mounted(){
-    // let book = await this.$axios.get(`${URLSHEETSGOOGLEAPI}?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`)
-    // if(!!book.data){
-    //   if(book.data.sheets.length != 0){
-    //     let sheetTitle = book.data.sheets[0].properties.title
-    //     let sheetData = await this.$axios.get(`${URLSHEETSGOOGLEAPI}/values/${sheetTitle}?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`)
-    //     if(!!sheetData.data){
-    //       console.log("values", sheetData.data.values)
-    //       console.log("sheetData.data", sheetData.data)
-    //     }
-    //   }
-    // }
   }
 };
 </script>
