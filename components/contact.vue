@@ -105,6 +105,7 @@
 </template>
 
 <script>
+const URLSHEETSGOOGLEAPI = 'https://sheets.googleapis.com/v4/spreadsheets/1o7GdrkD50Wk_WB2Gm1t94vW7RSA3ROh_GH0z8yUc9Uc'
 export default {
   name: "contact",
   data: () => ({
@@ -148,12 +149,39 @@ export default {
     }
   }),
   methods: {
-    sendMessage(){
-      console.log("this.formContact", this.formContact)
+    async sendMessage(){
+      // await this.$axios.post(`${URLSHEETSGOOGLEAPI}/values/'Hoja 1'!A1:E1:append?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`, {
+      //   values: [
+      //     [
+      //       this.formContact.firstName,
+      //       this.formContact.lastName,
+      //       this.formContact.email,
+      //       this.formContact.phone,
+      //       this.formContact.message
+      //     ]
+      //   ]
+      // })
+      // this.formContact = {
+      //   firstName: '',
+      //   lastName: '',
+      //   email: '',
+      //   phone: '',
+      //   message: ''
+      // }
     }
   },
   async mounted(){
-    axios.get("https://sheets.googleapis.com/v4/spreadsheets/1o7GdrkD50Wk_WB2Gm1t94vW7RSA3ROh_GH0z8yUc9Uc")
+    // let book = await this.$axios.get(`${URLSHEETSGOOGLEAPI}?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`)
+    // if(!!book.data){
+    //   if(book.data.sheets.length != 0){
+    //     let sheetTitle = book.data.sheets[0].properties.title
+    //     let sheetData = await this.$axios.get(`${URLSHEETSGOOGLEAPI}/values/${sheetTitle}?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`)
+    //     if(!!sheetData.data){
+    //       console.log("values", sheetData.data.values)
+    //       console.log("sheetData.data", sheetData.data)
+    //     }
+    //   }
+    // }
   }
 };
 </script>
