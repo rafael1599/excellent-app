@@ -156,6 +156,7 @@ export default {
       try {
         let res = await this.$axios.post(`/api/excellent-api/sendEmail`, this.formContact)
         if(res.data.success){
+          //ADD ALERT
           this.$refs.form.reset()
         }
       } catch (error) {
