@@ -1,37 +1,41 @@
 <template>
-  <v-app-bar
-      elevation="0"
-      height="126"
-      color="#EAEAEA">
-    <v-app-bar-title>
-      <img :src="logoUrl" href="#home">
-    </v-app-bar-title>
-    <v-spacer></v-spacer>
-    <v-btn 
-      class="links"
-      color="transparent"
-      height="94"
-      elevation="0"
-      href="#services">Services</v-btn>
-    <v-btn 
-      class="links"
-      color="transparent"
-      height="94"
-      elevation="0"
-      href="#rates">Rates</v-btn>
-    <v-btn 
-      class="links"
-      color="transparent"
-      height="94"
-      elevation="0"
-      href="#contact">Contact</v-btn>
-    <v-btn 
-      class="links"
-      color="transparent"
-      height="94"
-      elevation="0"
-      to="testimonials">Testimonials</v-btn>
-  </v-app-bar>
+    <v-app-bar
+    class="d-none d-sm-block" cols="12" sm="6"
+    elevation="0"
+    height="126"
+    color="#EAEAEA">
+      <v-app-bar-title>
+        <img :src="logoUrl" href="#home">
+      </v-app-bar-title>
+      <v-spacer></v-spacer>
+      <v-col 
+      class="d-none d-md-block" cols="12" md="6">
+        <v-btn 
+        class="links"
+        color="transparent"
+        height="94"
+        elevation="0"
+        href="#services">Services</v-btn>
+        <v-btn 
+        class="links"
+        color="transparent"
+        height="94"
+        elevation="0"
+        href="#rates">Rates</v-btn>
+        <v-btn 
+        class="links"
+        color="transparent"
+        height="94"
+        elevation="0"
+        href="#contact">Contact</v-btn>
+        <v-btn 
+        class="links"
+        color="transparent"
+        height="94"
+        elevation="0"
+        to="testimonials">Testimonials</v-btn>
+    </v-col>
+      </v-app-bar>
 </template>
 
 <script>
