@@ -75,9 +75,15 @@ export default {
         }
         &-left{
             background-color: #C7C7C7;
+            img{
+                max-width: 426px;
+            }
         }
         &-right{
             background-color: #FFFFFF;
+            img{
+                max-width: 426px;
+            }
         }
     }
 }

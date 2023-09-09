@@ -14,9 +14,9 @@
             <img :src="number">
         </v-btn>
       </div>
-      <div class="card-withe-right">
-        <v-img :src="taxiCar">
-        </v-img>
+      <div class="card-white-right">
+        <img :src="taxiCar" />
+        <img :src="taxiVan" />
       </div>
     </div>
   </div>
@@ -28,7 +28,8 @@ export default {
   data: () => ({
     model: 0,
     number: require('../assets/icons/number.svg'),
-    taxiCar: require('../assets/icons/taxi-car.svg')
+    taxiCar: require('../assets/icons/taxi-car.svg'),
+    taxiVan: require('../assets/icons/taxi-van.svg')
   }),
 }
 </script>
@@ -53,7 +54,10 @@ export default {
       }
     }
     &-right{
-      max-width: 550px;
+      display: flex;
+      img{
+        max-width: 426px;
+      }
     }
   }
 }
