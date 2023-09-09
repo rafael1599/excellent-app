@@ -150,24 +150,27 @@ export default {
   }),
   methods: {
     async sendMessage(){
-      // await this.$axios.post(`${URLSHEETSGOOGLEAPI}/values/'Hoja 1'!A1:E1:append?key=AIzaSyCtnep4IbNgDCr7WFuRAar7iqUfwP015F0`, {
-      //   values: [
-      //     [
-      //       this.formContact.firstName,
-      //       this.formContact.lastName,
-      //       this.formContact.email,
-      //       this.formContact.phone,
-      //       this.formContact.message
-      //     ]
-      //   ]
-      // })
-      // this.formContact = {
-      //   firstName: '',
-      //   lastName: '',
-      //   email: '',
-      //   phone: '',
-      //   message: ''
-      // }
+      this.loading = true
+      try {
+        let res = await this.$axios.post(`/api/excellent-api/sendEmail`, this.formContact)
+        if(res.success){
+          console.log("res.data", res.data)
+          // this.resetForm()
+        }
+      } catch (error) {
+        console.log("error", error)
+      } finally {
+        this.loading = false
+      }
+    },
+    async resetForm(){
+      this.formContact = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: ''
+      }
     }
   },
   async mounted(){

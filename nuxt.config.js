@@ -1,6 +1,7 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  srcDir: 'src',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - app-taxi-fe',
@@ -48,8 +49,14 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    proxy: true,
+    debug: true    
+  },
+  proxy:{
+    '/api/excellent-api': {
+      target: 'http://localhost:3000/api/excellent-api',
+      pathRewrite: {'^/api/excellent-api': ''}
+    }
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -89,5 +96,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+
+  server: {
+    port: 3002, // default: 3000
+    host: '0.0.0.0' // default: localhost
   }
 }
