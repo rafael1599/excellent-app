@@ -4,15 +4,15 @@
             <span>Services</span>
         </div>
         <div class="services-content">
-            <div class="card-custom services-content-left">
-                <img :src="taxiCar" />
-                <h2>TAXI SERVICE</h2>
-                <p>Experience Comfort & Convenience with our 4-Passenger Taxis! </p>
-            </div>
             <div class="card-custom services-content-right">
                 <img :src="taxiVan" />
                 <h2>MINIVAN</h2>
                 <p>Discover our Spacious Minivans for Seamless Group Outings & Family Trips.</p>
+            </div>
+            <div class="card-custom services-content-left">
+                <img :src="taxiCar" />
+                <h2>TAXI SERVICE</h2>
+                <p>Experience Comfort & Convenience with our 4-Passenger Taxis! </p>
             </div>
         </div>
     </div>
