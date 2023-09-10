@@ -29,4 +29,9 @@ export default {
   flex-direction: column;
   gap: 30px;
 }
+@media (max-width: 700px) {
+  .container-index{
+    gap: 8px;
+  }
+}
 </style>
