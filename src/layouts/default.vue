@@ -27,6 +27,14 @@ export default {
       }
       this.SET_BREAKPOINT(val)
     }
+  },
+  mounted() {
+    if(['xs','sm','md'].includes(this.$vuetify.breakpoint.name)){
+      this.SET_IS_MOBILE(true)
+    }else{
+      this.SET_IS_MOBILE(false)
+    }
+    this.SET_BREAKPOINT(this.$vuetify.breakpoint.name)
   }
 }
 </script>
