@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <navbar/>
+    <navbar :drawer="drawer" @changeDrawer="changeDrawer($event)"/>
+    <sidebar :drawer="drawer" @changeDrawer="changeDrawer($event)"/>
     <v-main>
       <Nuxt/>
     </v-main>
@@ -9,12 +10,19 @@
 
 <script>
 import navbar from '~/components/navbar.vue';
+import sidebar from '~/components/sidebar.vue';
 import { mapMutations } from 'vuex'
 export default {
   components: {
     navbar,
+    sidebar
   },
   name: 'DefaultLayout',
+  data(){
+    return{
+      drawer: false
+    }
+  },
   methods: {
     ...mapMutations("vuetify", ['SET_IS_MOBILE', 'SET_BREAKPOINT']),
     validateSize(param){
@@ -24,6 +32,9 @@ export default {
         this.SET_IS_MOBILE(false)
       }
       this.SET_BREAKPOINT(this.$vuetify.breakpoint.name)
+    },
+    changeDrawer(param){
+      this.drawer = param
     }
   },
   watch: {
@@ -38,6 +49,9 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  overflow: hidden;
+}
 .theme--light.v-application{
   background-color: #EAEAEA !important;
   .v-main__wrap{

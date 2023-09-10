@@ -39,20 +39,31 @@
         </v-btn>
       </v-col>
     </v-row>
-    <v-app-bar-nav-icon v-else></v-app-bar-nav-icon>
+    <v-app-bar-nav-icon v-else @click.stop="changeDrawer()"></v-app-bar-nav-icon>
   </v-app-bar>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 export default {
+  props: {
+    drawer: {
+      type: Boolean,
+      default: () => false
+    }
+  },
   data: () => ({
     tab: null,
     items: ["web", "shopping", "videos", "images", "news"],
-    logoUrl: require("../assets/icons/logo.svg"),
+    logoUrl: require("../assets/icons/logo.svg")
   }),
   computed: {
     ...mapState("vuetify", ['isMobile'])
+  },
+  methods: {
+    changeDrawer(){
+      this.$emit("changeDrawer", !this.drawer)
+    }
   }
 };
 </script>
