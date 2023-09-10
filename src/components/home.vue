@@ -7,10 +7,10 @@
         <v-btn
           color="#FFC736"
           width="344"
+          max-width="100%"
           height="72"
           rounded
-          href="tel:8454417777"
-          style="padding: 0 61px; margin-top: 10px;">
+          href="tel:8454417777">
             <img :src="number">
         </v-btn>
       </v-col>
@@ -71,6 +71,13 @@ export default {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        p{
+          font-size: 32px;
+          font-family: 'Judson';
+          letter-spacing: normal;
+          line-height: normal;
+          margin-bottom: 16px;
+        }
       }
       &-right{
         justify-content: center;
@@ -78,7 +85,4 @@ export default {
     }
   }
 }
-
-
-
 </style>

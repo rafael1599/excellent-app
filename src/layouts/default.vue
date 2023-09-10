@@ -38,4 +38,12 @@ export default {
     padding: 0 30px 0 30px;
   }
 }
+
+@media (max-width: 700px) {
+  .theme--light.v-application{
+    .v-main__wrap{
+      padding: 0 8px 0 8px;
+    }
+  }
+}
 </style>
