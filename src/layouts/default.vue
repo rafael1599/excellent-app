@@ -16,25 +16,23 @@ export default {
   },
   name: 'DefaultLayout',
   methods: {
-    ...mapMutations("vuetify", ['SET_IS_MOBILE', 'SET_BREAKPOINT'])
-  },
-  watch: {
-    "$vuetify.breakpoint.name"(val){
-      if(['xs','sm','md'].includes(val)){
+    ...mapMutations("vuetify", ['SET_IS_MOBILE', 'SET_BREAKPOINT']),
+    validateSize(param){
+      if(['xs','sm','md'].includes(param)){
         this.SET_IS_MOBILE(true)
       }else{
         this.SET_IS_MOBILE(false)
       }
-      this.SET_BREAKPOINT(val)
+      this.SET_BREAKPOINT(this.$vuetify.breakpoint.name)
+    }
+  },
+  watch: {
+    "$vuetify.breakpoint.name"(val){
+      this.validateSize(val)
     }
   },
   mounted() {
-    if(['xs','sm','md'].includes(this.$vuetify.breakpoint.name)){
-      this.SET_IS_MOBILE(true)
-    }else{
-      this.SET_IS_MOBILE(false)
-    }
-    this.SET_BREAKPOINT(this.$vuetify.breakpoint.name)
+    this.validateSize(this.$vuetify.breakpoint.name)
   }
 }
 </script>
