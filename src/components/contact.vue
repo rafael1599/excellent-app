@@ -11,7 +11,7 @@
             <v-col
               class="py-0"
               cols="12"
-              md="6">
+              lg="6">
               <v-text-field
                 v-model="formContact.firstName"
                 :rules="rules.firstName"
@@ -24,7 +24,7 @@
             <v-col
               class="py-0"
               cols="12"
-              md="6">
+              lg="6">
               <v-text-field
                 v-model="formContact.lastName"
                 :rules="rules.lastName"
@@ -37,7 +37,7 @@
             <v-col
               class="py-0"
               cols="12"
-              md="6">
+              lg="6">
               <v-text-field
                 v-model="formContact.email"
                 :rules="rules.email"
@@ -50,7 +50,7 @@
             <v-col
               class="py-0"
               cols="12"
-              md="6">
+              lg="6">
               <v-text-field
                 v-model="formContact.phone"
                 :rules="rules.phone"
@@ -211,7 +211,6 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      height: 750px;
       img {
         max-height: 350px;
         margin-bottom: 33px;
@@ -263,6 +262,67 @@ export default {
         font-size: 28px;
         &-title{
           font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1263px) {
+  .contact{
+    &-content {
+      .card-custom{
+        h2{
+          font-size: 32px;
+        }
+      }
+      &-left{
+        padding: 48px;
+      }
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .contact{
+    &-content {
+      flex-direction: column;
+      .card-custom{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .contact{
+    gap: 8px;
+    &-title{
+        height: 80px;
+        span{
+            font-size: 48px;
+        }
+    }
+    &-content {
+      gap: 8px;
+      &-right{
+        &-text-address{
+          padding: 32px 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .contact{
+    &-content {
+      &-left{
+        padding: 24px;
+      }
+      &-right{
+        &-text-address{
+          font-size: 22px;
         }
       }
     }

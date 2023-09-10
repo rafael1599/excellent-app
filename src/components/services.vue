@@ -140,7 +140,6 @@ export default {
         &-title{
             height: 80px;
             span{
-                font-family: 'Nerko One';
                 font-size: 48px;
             }
         }
