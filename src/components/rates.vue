@@ -134,13 +134,18 @@ export default {
   methods: {
     navigateCards(direction) {
       let d = document.getElementById("rates-content")
+      let card = document.querySelectorAll(".card-custom")
+      let scrollNumber = 910
+      if(card.length != 0){
+        scrollNumber = card[0].offsetWidth + 30
+      }
       let scroll = {
         behavior: "smooth"
       }
       if(direction == 'prev'){
-        scroll.left = d.scrollLeft - 910
+        scroll.left = d.scrollLeft - scrollNumber
       }else{
-        scroll.left = d.scrollLeft + 910
+        scroll.left = d.scrollLeft + scrollNumber
       }
       d.scrollTo(scroll)
     },
@@ -209,9 +214,9 @@ export default {
         white-space: normal;
         overflow: hidden;
         background-color: #FFFFFF;
-        height: 750px;
         img{
           margin-bottom: 16px;
+          max-width: 100%;
         }
         h2{
           font-size: 48px;
@@ -244,38 +249,50 @@ export default {
       }
     }
 }
+
+@media (max-width: 1263px) {
+  .rates{
+    &-content{
+      .card-custom{
+        min-width: 500px;
+        max-width: 500px;
+        h2{
+          font-size: 32px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  .rates{
+    &-content{
+      .card-custom{
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .rates{
+    gap: 8px;
+    &-title{
+        height: 80px;
+        span{
+            font-size: 48px;
+        }
+    }
+    &-content{
+      .card-custom{
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}
 </style>
-.rates {
-  margin-top: 32px;
-  width: 1860px;
-  height: 1080px;
-}
-.rates-logo{
-  margin-bottom: 32px;
-}
-
-.card{
-text-align: center;
-height: 100%;
-
-}
-.card p .text-h2 {
-  padding-top: 5%;
-  color: black;
-}
-.text-h2{
-  margin-top: 12px;
-}
-
-.text {
-  font-size: small;
-  text-decoration-color: black;
-}
-
-.img-places {
-  width: 600px;
-}
-
-.img-card {
-  align-items: center;
-}</style>
