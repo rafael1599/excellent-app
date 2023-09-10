@@ -85,4 +85,10 @@ export default {
     }
   }
 }
+
+@media (max-width: 450px) {
+  .home{
+    padding: 32px 32px;
+  }
+}
 </style>

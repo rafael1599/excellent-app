@@ -25,4 +25,22 @@ export default {
         text-align: center;
     }
 }
+
+@media (max-width: 959px) {
+    .welcome{
+        padding: 32px 32px;
+        p{
+            font-size: 32px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .welcome{
+        padding: 24px 24px;
+        p{
+            font-size: 24px;
+        }
+    }
+}
 </style>
