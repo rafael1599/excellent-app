@@ -28,9 +28,9 @@ export default {
   name: 'home',
   data: () => ({
     model: 0,
-    number: require('../assets/icons/number.svg'),
-    taxi: require('../assets/icons/car-and-van.svg'),
-    taxiCar: require('../assets/icons/taxi-car.svg')
+    number: require('@/assets/icons/number.svg'),
+    taxi: require('@/assets/icons/car-and-van.svg'),
+    taxiCar: require('@/assets/icons/taxi-car.svg')
   }),
   computed: {
     ...mapState("vuetify", ['isMobile'])

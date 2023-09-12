@@ -124,8 +124,8 @@ var querystring = require('querystring')
 export default {
   name: "contact",
   data: () => ({
-    contactUrl: require("../assets/icons/contact.svg"),
-    mapUrl: require("../assets/icons/map.svg"),
+    contactUrl: require("@/assets/icons/contact.svg"),
+    mapUrl: require("@/assets/icons/map.svg"),
     currentLocation: '',
     location: {
       latitude: 41.1284729,

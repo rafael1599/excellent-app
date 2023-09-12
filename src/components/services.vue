@@ -22,8 +22,8 @@ export default {
     name: 'services',
     data: () => ({
         model: 0,
-        taxiCar: require('../assets/icons/taxi-car.svg'),
-        taxiVan: require('../assets/icons/taxi-van.svg')
+        taxiCar: require('@/assets/icons/taxi-car.svg'),
+        taxiVan: require('@/assets/icons/taxi-van.svg')
     }),
 }
 </script>

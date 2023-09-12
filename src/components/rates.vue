@@ -65,69 +65,69 @@ export default {
     places: [
       {
         title: 'TO MONSEY',
-        img: require('../assets/places/to-monsey.svg'),
+        img: require('@/assets/places/to-monsey.svg'),
         text: '(click here to view rates to Monsey)',
         sheetName: '1. MONSEY'
       },
       {
         title: 'TO NEW CITY',
-        img: require('../assets/places/to-new-city.svg'),
+        img: require('@/assets/places/to-new-city.svg'),
         text: '(click here to view rates to New City)',
         sheetName: '2. NEW CITY'
       },
       {
         title: 'TO NANUET & BARDONIA',
-        img: require('../assets/places/to-nanuet-and-bardonia.svg'),
+        img: require('@/assets/places/to-nanuet-and-bardonia.svg'),
         text: '(click here to view rates to Nanuet & Bardonia)',
         sheetName: '3. NANUET & BARDONIA'
       },{
         title: 'WEST NYACK & NYACK',
-        img: require('../assets/places/WEST-NYACK-&-NYACK.svg'),
+        img: require('@/assets/places/WEST-NYACK-&-NYACK.svg'),
         text: '(click here to view rates to WEST NYACK & NYACK)',
         sheetName: '4. WEST NYACK & NYACK'
       },{
         title: 'NEW SQUARE',
-        img: require('../assets/places/NEW-SQUARE.svg'),
+        img: require('@/assets/places/NEW-SQUARE.svg'),
         text: '(click here to view rates to NEW SQUARE)',
         sheetName: '5. NEW SQUARE'
       },{
         title: 'POMONA',
-        img: require('../assets/places/POMONA.svg'),
+        img: require('@/assets/places/POMONA.svg'),
         text: '(click here to view rates in POMONA)',
         sheetName: '6. POMONA'
       },{
         title: 'AIRMONT',
-        img: require('../assets/places/AIRMONT.svg'),
+        img: require('@/assets/places/AIRMONT.svg'),
         text: '(click here to view rates to AIRMONT)',
         sheetName: '7. AIRMONT'
       },{
         title: 'SUFFERN',
-        img: require('../assets/places/SUFFERN.svg'),
+        img: require('@/assets/places/SUFFERN.svg'),
         text: '(click here to view rates to SUFFERN)',
         sheetName: '8. SUFFERN'
       },{
         title: 'CHESTNUT RIDGE',
-        img: require('../assets/places/CHESTNUT-RIDGE.svg'),
+        img: require('@/assets/places/CHESTNUT-RIDGE.svg'),
         text: '(click here to view rates to CHESTNUT RIDGE)',
         sheetName: '9. CHESTNUT RIDGE'
       },{
         title: 'PEARL RIVER',
-        img: require('../assets/places/PEARL-RIVER.svg'),
+        img: require('@/assets/places/PEARL-RIVER.svg'),
         text: '(click here to view rates to PEARL RIVER)',
         sheetName: '10. PEARL RIVER'
       },{
         title: 'AIRPORTS',
-        img: require('../assets/places/AIRPORTS.svg'),
+        img: require('@/assets/places/AIRPORTS.svg'),
         text: '(click here to view rates to AIRPORTS)',
         sheetName: '11. AIRPORTS'
       },{
         title: 'LONG DISTANCE',
-        img: require('../assets/places/LONG-DISTANCE.svg'),
+        img: require('@/assets/places/LONG-DISTANCE.svg'),
         text: '(click here to view rates to LONG DISTANCE)',
         sheetName: '12. LONG DISTANCE'
       },
     ],
-    ratesUrl: require('../assets/icons/rates.svg'),
+    ratesUrl: require('@/assets/icons/rates.svg'),
     dialog: false,
     citySelected: {}
   }),

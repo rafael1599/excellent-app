@@ -55,7 +55,7 @@ export default {
   data: () => ({
     tab: null,
     items: ["web", "shopping", "videos", "images", "news"],
-    logoUrl: require("../assets/icons/logo.svg")
+    logoUrl: require("@/assets/icons/logo.svg")
   }),
   computed: {
     ...mapState("vuetify", ['isMobile'])
