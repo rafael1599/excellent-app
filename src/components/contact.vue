@@ -91,8 +91,11 @@
           ref="gMap"
           language="en"
           :center="{lat: location.latitude, lng: location.longitude}"
-          :options="{fullscreenControl: false}"
-          :zoom="16">
+          :options="{
+            fullscreenControl: false,
+            mapTypeId: 'satellite'
+          }"
+          :zoom="19">
           <GMapMarker
               :position="{lat: location.latitude, lng: location.longitude}"
               :options="{icon: location === currentLocation ? pins.selected : pins.notSelected}"
@@ -128,8 +131,8 @@ export default {
     mapUrl: require("@/assets/icons/map.svg"),
     currentLocation: '',
     location: {
-      latitude: 41.1284729,
-      longitude: -74.0408581
+      latitude: 41.128640,
+      longitude: -74.040564
     },
     pins: {
       selected: '',
