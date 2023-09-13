@@ -4,8 +4,8 @@ export default {
   srcDir: 'src',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - app-taxi-fe',
-    title: 'app-taxi-fe',
+    titleTemplate: 'Excellent Taxi',
+    title: 'Excellent Taxi',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
