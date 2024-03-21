@@ -103,18 +103,18 @@
               <GMapInfoWindow :options="{maxWidth: 200}">
                 <h3><b>Excellent Taxi</b></h3>
                 <br>
-                <span>300 North Main St, Spring Valley, NY, 10977, United States.</span>
+                <span>300 North Main St, Spring Valley, NY 10977.</span>
               </GMapInfoWindow>
           </GMapMarker>
         </GMap>
         <div class="contact-content-right-text-address">
           <span class="contact-content-right-text-address-title">ADDRESS</span>
-          <span>300 North Main St, Spring Valley, NY, 10977, United States.</span>
+          <span>300 North Main St, Spring Valley, NY 10977</span>
           <span class="contact-content-right-text-address-title">HOURS</span>
           <span>24 hours Mon-Sun</span>
           <span class="contact-content-right-text-address-title">EMAIL</span>
           <span>
-            <a href="mailto:exelenttaxi2023@gmail.com">exelenttaxi2023@gmail.com</a>
+            <a href="mailto:exellenttaxi2023@gmail.com">exellenttaxi2023@gmail.com</a>
           </span>
         </div>
       </div>
